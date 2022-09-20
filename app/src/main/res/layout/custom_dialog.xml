@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +12,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp" >
+            android:padding="15dp" >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -72,10 +72,11 @@
         </FrameLayout>
 
         <ImageView
+            android:id="@+id/close"
             android:layout_width="25dp"
             android:layout_height="30dp"
             android:layout_gravity="center|top"
             android:src="@drawable/ic_baseline_close_16" />
     </FrameLayout>
-</FrameLayout>
+</RelativeLayout>
 

@@ -3,6 +3,8 @@ package com.example.customdialogclosebtn;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -16,6 +18,7 @@ public class CustomDialog extends Dialog {
     RecyclerView recyclerview;
     AdaptersDialog dialog;
     LinearLayout layout;
+    ImageView close;
     ArrayList<ComboBox_ListView> listVOs=new ArrayList<>();
 
     @Override
@@ -24,7 +27,14 @@ public class CustomDialog extends Dialog {
         setContentView(R.layout.custom_dialog);
         layout=findViewById(R.id.layout);
         recyclerview=findViewById(R.id.recyclerview);
+        close=findViewById(R.id.close);
         setAdapters();
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dismiss();
+            }
+        });
     }
     private void setAdapters() {
         String[] set_Title = new String[]{

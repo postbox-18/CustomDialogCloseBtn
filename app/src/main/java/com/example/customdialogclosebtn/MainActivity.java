@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 CustomDialog builder=new CustomDialog(MainActivity.this);
                 //View dialogView= LayoutInflater.from(MainActivity.this).inflate(R.layout.custom_dialog,null);
                 builder.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                builder.setCancelable(true);
+                builder.setCancelable(false);
                 builder.show();
                /* layout=dialogView.findViewById(R.id.layout);
                 recyclerview=dialogView.findViewById(R.id.recyclerview);*/
